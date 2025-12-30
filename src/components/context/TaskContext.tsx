@@ -24,7 +24,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const toggleTask = (id: string) => {
-    setTasks(tasks.map(t => (t.id === id ? { ...t, completed: true } : t)));
+    setTasks(tasks.map(t => (t.id === id ? { ...t, completed: !t.completed  } : t)));
   };
 
   const removeTask = (id: string) => {
